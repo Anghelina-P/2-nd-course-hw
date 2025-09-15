@@ -126,4 +126,9 @@
   width: 600px;
   background: rgb(255, 255, 255);
   border-radius: 30px;
+}
+.section__games-title {
+  color: rgb(32, 32, 39);
+  font-weight: 700;
+  font-size: 48px;
 }/*# sourceMappingURL=style.css.map */
