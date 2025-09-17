@@ -54,6 +54,11 @@
   padding: 16px 28px 16px 28px;
   background: rgb(32, 32, 39);
 }
+.header__star {
+  position: absolute;
+  right: 400px;
+  top: 300px;
+}
 
 .section__about {
   background: rgb(32, 32, 39);
