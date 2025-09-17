@@ -114,26 +114,61 @@
 
 .section__games {
   background: rgb(32, 32, 39);
+  padding-bottom: 144px;
+}
+.section__games-heading {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 64px;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
+.section__games-general {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
 }
 .section__games-cards {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 48px;
 }
 .section__games-div {
   background: rgb(255, 255, 255);
   border-radius: 30px;
   display: flex;
 }
+.section__games-description {
+  height: 500px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
 .section__games-title {
   color: rgb(32, 32, 39);
   font-weight: 700;
   font-size: 48px;
+  padding-top: 48px;
+  padding-bottom: 24px;
 }
-.section__games-description {
-  height: 500px;
-  width: 600px;
+.section__games-text {
+  color: rgb(32, 32, 39);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  padding-bottom: 36px;
+}
+.section__games-button {
+  width: 247px;
+  height: 66px;
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
 }
 
 .footer {

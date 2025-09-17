@@ -113,12 +113,26 @@
 
 .section__games{
     background: rgba(32, 32, 39, 1);
+    padding-bottom: 144px;
+
+    &-heading{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 64px;
+    padding-top: 96px;
+    padding-bottom: 72px;
+    }
+
+    &-general{
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    }
 
     &-cards{  
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 48px;
     }
 
     &-div{
@@ -127,15 +141,40 @@
     display: flex;
     }
 
+    &-description{
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    }
+
     &-title{
     color: rgba(32, 32, 39, 1);
     font-weight: 700;
     font-size: 48px;
+    padding-top: 48px;
+    padding-bottom: 24px;
     }
 
-    &-description{
-    height: 500px;
-    width: 600px;
+    &-text{
+    color: rgba(32, 32, 39, 1);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 36px;
+    }
+
+    &-button{
+    width: 247px;
+    height: 66px;
+    border-radius: 60px;
+    background: rgba(32, 32, 39, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
     }
 }
 .footer{
