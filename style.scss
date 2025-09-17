@@ -119,18 +119,35 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 48px;
-}
+    }
 
     &-div{
-    height: 500px;
-    width: 600px;
     background: rgba(255, 255, 255, 1);
     border-radius: 30px;
+    display: flex;
     }
 
     &-title{
     color: rgba(32, 32, 39, 1);
     font-weight: 700;
     font-size: 48px;
+    }
+
+    &-description{
+    height: 500px;
+    width: 600px;
+    }
+}
+.footer{
+    height: 150px;
+    background: rgba(189, 237, 53, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text{
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
     }
 }

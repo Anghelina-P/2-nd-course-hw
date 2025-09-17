@@ -122,13 +122,29 @@
   padding: 48px;
 }
 .section__games-div {
-  height: 500px;
-  width: 600px;
   background: rgb(255, 255, 255);
   border-radius: 30px;
+  display: flex;
 }
 .section__games-title {
   color: rgb(32, 32, 39);
   font-weight: 700;
   font-size: 48px;
+}
+.section__games-description {
+  height: 500px;
+  width: 600px;
+}
+
+.footer {
+  height: 150px;
+  background: rgb(189, 237, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
