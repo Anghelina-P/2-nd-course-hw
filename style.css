@@ -1,4 +1,5 @@
 * {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -140,11 +141,11 @@
 }
 .section__games-description {
   height: 500px;
-  width: 600px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
   flex-wrap: wrap;
+  margin: 0 48px 0 48px;
 }
 .section__games-title {
   color: rgb(32, 32, 39);
