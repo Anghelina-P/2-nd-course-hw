@@ -17,7 +17,6 @@
 .header {
   background: rgb(225, 255, 143);
   width: 100%;
-  max-width: 1440px;
   height: 800px;
 }
 .header__text {
@@ -53,11 +52,6 @@
   justify-content: center;
   padding: 16px 28px 16px 28px;
   background: rgb(32, 32, 39);
-}
-.header__star {
-  position: absolute;
-  right: 400px;
-  top: 300px;
 }
 
 .section__about {
