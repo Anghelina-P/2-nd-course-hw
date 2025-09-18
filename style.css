@@ -79,6 +79,16 @@
 }
 .section__about-starone {
   position: absolute;
+  left: 800px;
+  bottom: 130px;
+}
+.section__about-starelleven {
+  position: absolute;
+}
+.section__about-startwelve {
+  position: absolute;
+  top: 1640px;
+  left: 700px;
 }
 .section__about-title {
   color: rgb(255, 255, 255);
@@ -103,6 +113,7 @@
 }
 .section__about-link {
   text-decoration: none;
+  position: relative;
 }
 .section__about-cards {
   background: rgb(255, 255, 255);
