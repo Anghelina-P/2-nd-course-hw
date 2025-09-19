@@ -15,30 +15,36 @@
 
 .header{
     background: rgba(225, 255, 143, 1);
-    width: 100%;
     height: 800px;
+
+    &__star{
+    position: absolute;
+    top: -333px;
+    right: -488px;
+    }
 
     &__star-two{
     position: absolute;
-    left: 680px;
-    bottom: 1200px;    
+    left: 63px;
+    top: 94px;   
     }
 
     &__star-three{
     position: absolute;
-    left: 780px;
-    top: 40px;
+    left: 156px;
+    top: 69px;
     }
 
     &__star-four{
     position: absolute; 
-    left: 1610px;  
-    bottom: 670px;
+    right: 344px;  
+    bottom: 59px;
     }
 
     &__star-five{
     position: absolute;
-    left: 1550px;
+    right: 455px;
+    bottom: 135px;
     }
 
     &__text{
@@ -82,18 +88,20 @@
 
     &-starone{
     position: absolute;
-    left: 800px;
-    bottom: 130px;
+    right: -142px;
+    top: 877px;
     }
 
     &-starelleven{
     position: absolute;
+    bottom: -970px;
+    left: 25px;
     }
 
     &-startwelve{
     position: absolute;
-    top: 1640px;
-    left: 700px;
+    bottom: -1022px;
+    left: 40px;
     }
 
     &-title{
@@ -119,7 +127,6 @@
 
     &-link{
     text-decoration: none;
-    position: relative;
     }
 
     &-cards{
@@ -132,6 +139,8 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
+    position: relative;
+    overflow: hidden;
     }
 
     &-div2{
@@ -154,7 +163,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 16px 10px 16px;
     margin-top: 32px;
     margin-left: 32px;
     margin-bottom: 16px;
@@ -176,6 +184,30 @@
 .section__games{
     background: rgba(32, 32, 39, 1);
     padding-bottom: 144px;
+
+    &-six{
+    position: absolute;
+    right: 44px;
+    top: 2390px;
+    }
+
+    &-seven{
+    position: absolute;
+    right: 123px;
+    top: 2360px;
+    }
+
+    &-eight{
+    position: absolute;
+    right: 65px;
+    top: 5636px;
+    }
+
+    &-ten{
+    position: absolute;
+    top: 5684px;
+    right: 150px;
+    }
 
     &-heading{
     color: rgba(255, 255, 255, 1);
