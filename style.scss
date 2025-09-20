@@ -16,6 +16,8 @@
 .header{
     background: rgba(225, 255, 143, 1);
     height: 800px;
+    overflow: hidden;
+    position: relative;
 
     &__star{
     position: absolute;
@@ -84,12 +86,13 @@
 
 .section__about{
     background: rgba(32, 32, 39, 1);
-    max-width: 1440px;
+    position: relative;
+    overflow: hidden;
 
     &-starone{
     position: absolute;
     right: -142px;
-    top: 877px;
+    top: 77px;
     }
 
     &-starelleven{

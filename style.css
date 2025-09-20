@@ -17,6 +17,8 @@
 .header {
   background: rgb(225, 255, 143);
   height: 800px;
+  overflow: hidden;
+  position: relative;
 }
 .header__star {
   position: absolute;
@@ -80,12 +82,13 @@
 
 .section__about {
   background: rgb(32, 32, 39);
-  max-width: 1440px;
+  position: relative;
+  overflow: hidden;
 }
 .section__about-starone {
   position: absolute;
   right: -142px;
-  top: 877px;
+  top: 77px;
 }
 .section__about-starelleven {
   position: absolute;
