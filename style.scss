@@ -1,4 +1,4 @@
-@import 'mobile';
+
 
 * { 
     font-family: 'Montserrat', sans-serif;
@@ -49,6 +49,10 @@
     position: absolute;
     right: 455px;
     bottom: 135px;
+    }
+
+    &__stars-mob{
+        display: none;
     }
 
     &__text{
@@ -117,6 +121,10 @@
     padding-top: 94px;
     padding-bottom: 24px;}
 
+    &-titlemob{
+    display: none;
+    }
+
     &-text{
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
@@ -184,6 +192,14 @@
     padding-bottom: 36px;
     padding-left: 32px;
     padding-right: 32px;
+}
+
+.section__cards-descriptionmob{
+    display: none;
+}
+
+.section__cards-butttonmob{
+    display: none;
 }
 
 .section__games{
@@ -289,3 +305,4 @@
     font-weight: 600;
     }
 }
+@import 'mobile';

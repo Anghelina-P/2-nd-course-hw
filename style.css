@@ -45,6 +45,9 @@
   right: 455px;
   bottom: 135px;
 }
+.header__stars-mob {
+  display: none;
+}
 .header__text {
   padding-top: 196px;
 }
@@ -107,6 +110,9 @@
   line-height: 100%;
   padding-top: 94px;
   padding-bottom: 24px;
+}
+.section__about-titlemob {
+  display: none;
 }
 .section__about-text {
   color: rgb(255, 255, 255);
@@ -172,6 +178,14 @@
   padding-bottom: 36px;
   padding-left: 32px;
   padding-right: 32px;
+}
+
+.section__cards-descriptionmob {
+  display: none;
+}
+
+.section__cards-butttonmob {
+  display: none;
 }
 
 .section__games {
@@ -264,4 +278,142 @@
   font-size: 24px;
   line-height: 100%;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__text {
+    padding-top: 147px;
+  }
+  .header__title {
+    font-size: 40px;
+  }
+  .header__description {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .header__button {
+    width: 285px;
+    height: 55px;
+  }
+  .header__stars-mob {
+    display: block;
+  }
+  .header__starmob-big {
+    position: absolute;
+    top: -103px;
+    right: -112px;
+  }
+  .header__starmob-two {
+    position: absolute;
+    top: 97px;
+    left: 37px;
+  }
+  .header__starmob-three {
+    position: absolute;
+    top: 64px;
+    left: 91px;
+  }
+  .header__starmob-four {
+    position: absolute;
+    right: 34px;
+    bottom: 79px;
+  }
+  .header__starmob-five {
+    position: absolute;
+    right: 86px;
+    bottom: 125px;
+  }
+  .header__star {
+    display: none;
+  }
+  .header__star-two {
+    display: none;
+  }
+  .header__star-three {
+    display: none;
+  }
+  .header__star-four {
+    display: none;
+  }
+  .header__star-five {
+    display: none;
+  }
+  .section__about {
+    padding-bottom: 10px;
+  }
+  .section__about-starone {
+    display: none;
+  }
+  .section__about-starelleven {
+    display: none;
+  }
+  .section__about-startwelve {
+    display: none;
+  }
+  .section__about-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section__about-title {
+    display: none;
+  }
+  .section__about-titlemob {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .section__about-text {
+    display: none;
+  }
+  .section__about-div1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__about-div2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__cards-number {
+    display: none;
+  }
+  .section__cards-title {
+    padding-bottom: 16px;
+    padding-left: 29px;
+  }
+  .section__cards-descriptionmob {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 29px;
+  }
+  .section__cards-butttonmob {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 60px;
+    border: 1px solid rgb(32, 32, 39);
+    background: rgb(32, 32, 39);
+    margin-bottom: 32px;
+    width: 285px;
+    height: 55px;
+    margin-left: 29px;
+    color: rgb(255, 255, 255);
+  }
+  .section__games {
+    display: none;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
