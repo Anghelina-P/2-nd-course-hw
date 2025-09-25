@@ -36,7 +36,7 @@ alert (`Привет,${newName}!`);
 
 
 
-
+/*
  let password = 'пароль';
 prompt ('Введите пароль');
 if (password = 'пароль') {
@@ -88,3 +88,47 @@ c > 0 && c < 10 ? console.log('Верно') : console.log('Неверно');
         console.log('Месяца с таким номером нет');
         break;
 }
+*/
+
+let i = 1;
+let c = 2;
+while (i<=c) {
+    console.log('Привет!');
+    i++;
+}
+
+let a = 1;
+while (a <= 5) {
+    console.log(a);
+    a++;    
+}
+
+let b = 7;
+while (b <= 22) {
+    console.log(b);
+    b++;    
+}
+
+let obj = {
+  "Коля": '200',
+  "Вася": '300', 
+  "Петя": '400'
+};
+for (let key in obj) {
+  console.log(`${key} — зарплата ${obj[key]} долларов`);
+}
+
+let n = 1000;
+let num = 0;
+do {
+    n = n / 2;
+    num++;
+} while (n >= 50);
+console.log("Финальное число:", n);
+console.log("Количество итераций:", num);
+
+let friday = 5;
+do {
+    console.log(`Сегодня пятница, ${friday}-е число. Необходимо подготовить отчет.`);
+    friday += 7; 
+} while (friday <= 31); 
