@@ -159,14 +159,31 @@
     background: rgba(255, 255, 255, 1);
     border-radius: 30px;
     width: 378px;
-    gap: 32px;}
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    box-sizing: border-box;}
+
+    &-cards:hover{
+    width: 406px;
+    gap: 17px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    &-img{
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+    }
 
     &-div1{
     display: flex;
     flex-direction: row;
     gap: 32px;
     position: relative;
-    overflow: hidden;
     }
 
     &-div2{

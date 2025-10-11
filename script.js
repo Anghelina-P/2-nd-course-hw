@@ -89,7 +89,7 @@ c > 0 && c < 10 ? console.log('Верно') : console.log('Неверно');
         break;
 }
 */
-
+/*
 let i = 1;
 let c = 2;
 while (i<=c) {
@@ -131,4 +131,8 @@ let friday = 5;
 do {
     console.log(`Сегодня пятница, ${friday}-е число. Необходимо подготовить отчет.`);
     friday += 7; 
-} while (friday <= 31); 
+} while (friday <= 31); */
+
+let guessNumber = (prompt('Угадайте число от 1 до 100')) => {
+
+}
