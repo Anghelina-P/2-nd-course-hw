@@ -1,5 +1,5 @@
 
-
+/*
 function guessNumGame(userNum) {
 
    let attemps = 0;
@@ -126,3 +126,4 @@ let circle2 = {
 }
 console.log(circle2.getArea());
 console.log(circle2.getPerimeter());
+*/

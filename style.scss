@@ -287,7 +287,6 @@
     }
 
     &-description{
-    height: 500px;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -336,3 +335,4 @@
     }
 }
 @import 'mobile';
+@import 'tablet';
