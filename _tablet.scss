@@ -4,6 +4,22 @@
     padding-right: 16px;
 }
 
+    .section__about{
+    &-cards{
+    height: 570px;
+    width: 378px;}
+    &-div1{
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+    &-div2{
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+    }
     .section__games-img{
         width: 400px;
     }

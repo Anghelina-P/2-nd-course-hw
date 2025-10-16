@@ -95,7 +95,6 @@
 .section__about {
   background: rgb(32, 32, 39);
   position: relative;
-  overflow: hidden;
 }
 .section__about-starone {
   position: absolute;
@@ -152,8 +151,7 @@
   box-sizing: border-box;
 }
 .section__about-cards:hover {
-  width: 406px;
-  gap: 17px;
+  transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 .section__about-img {
@@ -165,7 +163,6 @@
   display: flex;
   flex-direction: row;
   gap: 32px;
-  position: relative;
 }
 .section__about-div2 {
   display: flex;
@@ -471,6 +468,20 @@
   .center {
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .section__about-cards {
+    height: 570px;
+    width: 378px;
+  }
+  .section__about-div1 {
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .section__about-div2 {
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .section__games-img {
     width: 400px;
