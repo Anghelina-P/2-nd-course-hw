@@ -24,106 +24,132 @@ function guessNumGame(userNum) {
    } while (userNum!==secretNum);
 }
 
-
-
-
-function minNum (a, b) {
-
-   if (a<b) {
-      return a;
-   }
-   return b;
-}
-let result = minNum (8, 4);
-console.log(result);
-result = minNum (6, 6);
-console.log(result);
-
-
-
-function evenNum(n) {
-
-   return Number(n) % 2 === 0 ? 'Число четное' : 'Число нечетное';
-}
-let n = prompt('Введите число');
-console.log(evenNum(n));
-
-
-
-function squareNum(c) {
-   return c*c;
-}
-
-console.log(squareNum(3));
-
-
-
-let e = prompt('Сколько вам лет?')
-function ageUser(e) {
-
-   if (e<0) {
-      return 'Вы ввели неправильное значение';
-   } 
-   else if (e>0 && e<13) {
-      return 'Привет, друг!';
-   }
-   else {
-      return 'Добро пожаловать!';
-   }
-}
-console.log(ageUser(e));
-
-
-
-function mult(f, g) {
-    
-   let num1 = Number(f);
-   let num2 = Number(g);
-   
-   return (isNaN(num1) || isNaN(num2)) ? 'Одно или оба значения не являются числом' : num1 * num2;
-}
-
-let res = mult(4, 7);
-console.log(res);  
-
-res = mult('абвг', 6);
-console.log(res);
-
-
-
-let h = prompt('Введите число');
-function cubedNum(h) {
-
-   let num = Number(h);
-
-   return (isNaN(num)) ? 'Переданный параметр не является числом' : `${num} в кубе равняется ${num*num*num}`;
-}
-console.log(cubedNum(h));
-
-
-
-let circle1 = {
-   radius: 20,
-   getArea() {
-      return `Площадь первого круга равна ${this.radius*this.radius*3.14}`;
-   },
-   getPerimeter() {
-      return `Периметр первого круга равен ${2*3.14*this.radius}`;
-   }
-}
-console.log(circle1.getArea());
-console.log(circle1.getPerimeter());
-
-let circle2 = {
-   radius: 15,
-   getArea() {
-      return `Площадь второго круга равна ${this.radius*this.radius*3.14}`;
-   },
-   getPerimeter() {
-      return `Периметр второго круга равен ${2*3.14*this.radius}`;
-   }
-   
-}
-console.log(circle2.getArea());
-console.log(circle2.getPerimeter());
+/*Задание 1
 */
+const num = [1, 5, 4, 10, 0, 3]
+for (let a = 0; a < num.length; a++){
+
+   console.log(num[a]);
+   if (num[a] === 10) break;
+}
+ 
+
+ /*Задание 2
+*/
+
+const numb = [1, 5, 4, 10, 0, 3]
+
+const findIndex = numb.indexOf(4)
+console.log(findIndex);
+
+ /*Задание 3
+Дан массив чисел: 
+[1, 3, 5, 10, 20].
+С помощью метода join
+выведите элементы массива через пробел (пустую строку ' ').*/
+
+const number = [1, 3, 5, 10, 20]
+
+let join = number.join(' ');
+console.log(join);
+
+/*Задание 4
+С помощью вложенных циклов создайте многомерный массив вида: 
+[[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+.*/
+
+const result = [];
+for (let i = 0; i < 3; i++) {
+    const row = [];
+
+    for (let j = 0; j < 3; j++) {
+        row.push(1);  
+    }
+        result.push(row);  
+}
+console.log(result);
+
+/*Задание 5
+Дан массив: 
+[1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.*/
+const taskFive = [1, 1, 1];
+taskFive.push(2,2,2);
+console.log(taskFive);
+
+/*Задание 6
+Дан массив: 
+[9, 8, 7, 'a', 6, 5].
+С помощью метода sort отсортируйте массив и удалите букву 'a'
+из массива. Затем выведите массив.*/
+const taskSix = [9, 8, 7, 'a', 6, 5];
+taskSix.sort()
+taskSix.pop()
+console.log(taskSix);
+
+ /*Задание 7
+Дан массив: 
+[9, 8, 7, 6, 5].
+Попросите пользователя угадать число с помощью метода prompt.
+Если значение, которое ввел пользователь, есть в массиве, выведите в 
+alert «Угадал», в противном случае — «Не угадал».
+
+
+
+
+let userAnswer = Number(prompt('Введите число'));
+const taskSeven = [9, 8, 7, 6, 5];
+let search = taskSeven.includes(userAnswer);
+search ? alert('Угадал') : alert('Не угадал');*/
+
+
+
+
+ /*Задание 8
+Дана строка: 
+'abcdef'. Выведите в консоль 'fedcba'.
+Для этого задания вам пригодится метод reverse(). 
+Он располагает элементы массива в порядке, обратном исходному.*/
+
+const taskEight = 'abcdef';
+let revers = taskEight.split('').reverse().join('');
+console.log(revers);
+
+
+/*Задание 9
+Дан массив: 
+[[1, 2, 3],[4, 5, 6]]. Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].*/
+
+const taskNine = [[1, 2, 3],
+                  [4, 5, 6]]
+let flatNine = taskNine.flat()
+console.log(flatNine);
+
+/*Задание 10
+Создайте массив с произвольными числами (диапазон от 1 до 10).
+Переберите его с помощью цикла for.В каждой итерации выведите в консоль сумму текущего и следующего элементов 
+массива.Следующий элемент массива можно получить с помощью индекса: 
+i + 1. Обратите внимание, что у последнего элемента нет следующего.*/
+
+const taskTen = [3,6,5,1,2,8,9,4,7];
+
+
+/*Задание 11
+Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив квадратов этих чисел.*/
+
+/*Задание 12
+Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.*/
+
+/*Задание 13
+Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив, содержащий только отрицательные значения.*/
+
+/*Задание 14
+Создайте массив, состоящий из 10 значений. Значения массива необходимо сгенерировать с помощью метода 
+Math.random() в диапазоне от 0 до 10.В данном массиве найдите все четные значения и добавьте их в новый массив. 
+Результат работы программы необходимо вывести в консоль — это будут два массива: исходный массив и массив с четными значениями.*/
+
+/*Задание 15
+Создайте массив, состоящий из 6 элементов. Элементы массива необходимо сгенерировать с помощью 
+Math.random()
+ в диапазоне от 1 до 10.
+
+Требуется найти среднее арифметическое этих цифр, результат программы вывести в консоль.*/
