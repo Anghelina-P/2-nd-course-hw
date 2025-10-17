@@ -60,6 +60,14 @@
   display: flex;
   flex-direction: column;
 }
+.header__title-title-mob1 {
+  display: flex;
+  gap: 20px;
+}
+.header__title-title-mob2 {
+  display: flex;
+  gap: 20px;
+}
 .header__title-mob {
   display: flex;
   gap: 20px;
@@ -95,16 +103,12 @@
 .section__about {
   background: rgb(32, 32, 39);
   position: relative;
+  overflow: hidden;
 }
 .section__about-starone {
   position: absolute;
   right: -142px;
   top: 77px;
-}
-.section__about-starelleven {
-  position: absolute;
-  bottom: -970px;
-  left: 25px;
 }
 .section__about-startwelve {
   position: absolute;
@@ -317,7 +321,13 @@
     flex-direction: column;
     align-items: center;
   }
-  .header__title-mob {
+  .header__title-mob1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .header__title-mob2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,6 +479,13 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+  .header-starone {
+    position: absolute;
+    right: 20px;
+    top: 77px;
+    max-width: 80px;
+    z-index: -1;
+  }
   .section__about-cards {
     height: 570px;
     width: 378px;
@@ -483,8 +500,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  .section__about-starone {
+    position: absolute;
+    right: -142px;
+    top: 77px;
+  }
   .section__games-img {
     width: 400px;
+    max-width: 100%;
   }
   .section__games-description {
     margin: 0 0 20px 0;

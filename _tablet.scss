@@ -4,6 +4,16 @@
     padding-right: 16px;
 }
 
+    .header{
+    &-starone{
+            position: absolute;
+            right: 20px;        
+            top: 77px;
+            max-width: 80px;   
+            z-index: -1;        
+        }
+    }
+
     .section__about{
     &-cards{
     height: 570px;
@@ -19,9 +29,15 @@
     justify-content: space-around;
     flex-wrap: wrap;
     }
+    &-starone{
+    position: absolute;
+    right: -142px;
+    top: 77px;
+    }
     }
     .section__games-img{
         width: 400px;
+        max-width: 100%; 
     }
 
     .section__games-description {

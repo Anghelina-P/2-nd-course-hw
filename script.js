@@ -22,10 +22,80 @@ function guessNumGame(userNum) {
    }
       
    } while (userNum!==secretNum);
+}*/
+
+
+
+
+function simpleArithmeticGame() {
+
+    let round = 1;
+
+    while (true) {
+
+    const operation = ['+', '-', '/', '*'];
+
+    const num1 = (Math.floor(Math.random()*50)+1);
+    const num2 = (Math.floor(Math.random()*50)+1);
+    let corrAnsw;
+    const simpleArithmetic = operation[Math.floor(Math.random() * operation.length)];
+
+    switch(simpleArithmetic) {
+            case '+': corrAnsw = num1 + num2; break;
+            case '-': corrAnsw = num1 - num2; break;
+            case '*': corrAnsw = num1 * num2; break;
+            case '/': corrAnsw = num1 / num2; break; 
+        }
+
+     const task = `${num1} ${simpleArithmetic} ${num2}`;
+
+     let userAnsw =(prompt(`Решите задачу : ${task}`));
+    
+      if (userAnsw === null) {
+            alert('пока');
+            break;
+        }
+
+        userAnsw = Number(userAnsw);
+
+    if (userAnsw===corrAnsw) {
+        alert('верный ответ')
+    } else {
+        alert('ошибка')
+    }
+ } 
+    round ++;
+  
 }
 
-/*Задание 1
-*/
+
+
+/* const taskFifteen = []
+
+for (r=0;r<6;r++){
+    taskFifteen.push(Math.floor(Math.random()*10)+1);
+}
+let sum = 0;
+for (let s = 0; s < taskFifteen.length; s++) {
+    sum += taskFifteen[s];  
+}
+
+const arithmMean = sum / taskFifteen.length;
+
+console.log(taskFifteen);
+console.log(arithmMean); */
+
+
+
+
+
+
+
+
+
+
+
+/*
 const num = [1, 5, 4, 10, 0, 3]
 for (let a = 0; a < num.length; a++){
 
@@ -34,29 +104,28 @@ for (let a = 0; a < num.length; a++){
 }
  
 
- /*Задание 2
-*/
+
+
 
 const numb = [1, 5, 4, 10, 0, 3]
 
 const findIndex = numb.indexOf(4)
 console.log(findIndex);
 
- /*Задание 3
-Дан массив чисел: 
-[1, 3, 5, 10, 20].
-С помощью метода join
-выведите элементы массива через пробел (пустую строку ' ').*/
+
+
+
+
 
 const number = [1, 3, 5, 10, 20]
 
 let join = number.join(' ');
 console.log(join);
 
-/*Задание 4
-С помощью вложенных циклов создайте многомерный массив вида: 
-[[1, 1, 1], [1, 1, 1], [1, 1, 1]]
-.*/
+
+
+
+
 
 const result = [];
 for (let i = 0; i < 3; i++) {
@@ -69,29 +138,23 @@ for (let i = 0; i < 3; i++) {
 }
 console.log(result);
 
-/*Задание 5
-Дан массив: 
-[1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.*/
+
+
+
 const taskFive = [1, 1, 1];
 taskFive.push(2,2,2);
 console.log(taskFive);
 
-/*Задание 6
-Дан массив: 
-[9, 8, 7, 'a', 6, 5].
-С помощью метода sort отсортируйте массив и удалите букву 'a'
-из массива. Затем выведите массив.*/
+
+
+
+
 const taskSix = [9, 8, 7, 'a', 6, 5];
 taskSix.sort()
 taskSix.pop()
 console.log(taskSix);
 
- /*Задание 7
-Дан массив: 
-[9, 8, 7, 6, 5].
-Попросите пользователя угадать число с помощью метода prompt.
-Если значение, которое ввел пользователь, есть в массиве, выведите в 
-alert «Угадал», в противном случае — «Не угадал».
+
 
 
 
@@ -99,57 +162,122 @@ alert «Угадал», в противном случае — «Не угада
 let userAnswer = Number(prompt('Введите число'));
 const taskSeven = [9, 8, 7, 6, 5];
 let search = taskSeven.includes(userAnswer);
-search ? alert('Угадал') : alert('Не угадал');*/
+search ? alert('Угадал') : alert('Не угадал'); 
 
 
 
 
- /*Задание 8
-Дана строка: 
-'abcdef'. Выведите в консоль 'fedcba'.
-Для этого задания вам пригодится метод reverse(). 
-Он располагает элементы массива в порядке, обратном исходному.*/
+  
+
 
 const taskEight = 'abcdef';
 let revers = taskEight.split('').reverse().join('');
 console.log(revers);
 
 
-/*Задание 9
-Дан массив: 
-[[1, 2, 3],[4, 5, 6]]. Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].*/
+
+
+
 
 const taskNine = [[1, 2, 3],
                   [4, 5, 6]]
 let flatNine = taskNine.flat()
 console.log(flatNine);
 
-/*Задание 10
-Создайте массив с произвольными числами (диапазон от 1 до 10).
-Переберите его с помощью цикла for.В каждой итерации выведите в консоль сумму текущего и следующего элементов 
-массива.Следующий элемент массива можно получить с помощью индекса: 
-i + 1. Обратите внимание, что у последнего элемента нет следующего.*/
-
-const taskTen = [3,6,5,1,2,8,9,4,7];
 
 
-/*Задание 11
-Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив квадратов этих чисел.*/
 
-/*Задание 12
-Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.*/
 
-/*Задание 13
-Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив, содержащий только отрицательные значения.*/
 
-/*Задание 14
-Создайте массив, состоящий из 10 значений. Значения массива необходимо сгенерировать с помощью метода 
-Math.random() в диапазоне от 0 до 10.В данном массиве найдите все четные значения и добавьте их в новый массив. 
-Результат работы программы необходимо вывести в консоль — это будут два массива: исходный массив и массив с четными значениями.*/
+const taskTen = [3, 6, 5, 1, 2, 8, 9, 4, 7];
+console.log(taskTen);
 
-/*Задание 15
-Создайте массив, состоящий из 6 элементов. Элементы массива необходимо сгенерировать с помощью 
-Math.random()
- в диапазоне от 1 до 10.
+for (let h = 0; h < taskTen.length - 1; h++) {
+    const sum = taskTen[h] + taskTen[h + 1];
+    console.log(sum);
+}
 
-Требуется найти среднее арифметическое этих цифр, результат программы вывести в консоль.*/
+
+
+
+
+
+
+function taskElleven(numbers) {
+    const squares = []
+    for (k = 0; k<numbers.length; k++){
+        let square = numbers[k] * numbers[k];
+        squares.push(square)
+    }
+    return squares
+}
+const outcome = taskElleven([2, 3, 5]);
+console.log(outcome);
+
+
+
+
+
+
+function taskTwelve(words) {
+    const wordLength = []
+    for (l=0; l<words.length; l++){
+        wordLength.push(words[l].length);
+    }
+    return wordLength
+}
+const outcoms = taskTwelve(['вода','огонь','земля']);
+console.log(outcoms);
+
+
+
+
+
+function taskThirteen(integers) {
+    const negativeNumbers = []
+    for (m=0;m<integers.length;m++){
+        if (integers[m]<0) {
+              negativeNumbers.push(integers[m])
+        }    
+    }
+    return negativeNumbers
+}
+const outcomes = taskThirteen([5, -3, -2, 6]);
+console.log(outcomes);
+
+ 
+
+
+
+const allNum = []
+const evenNum = []
+for (n=0;n<10;n++){
+    allNum.push(Math.floor(Math.random()*11));
+}
+for (p=0;p<allNum.length;p++){
+    if (allNum[p]%2===0) {
+        evenNum.push(allNum[p])
+    }
+}
+console.log(allNum);
+console.log(evenNum);
+
+
+   
+
+
+const taskFifteen = []
+
+for (r=0;r<6;r++){
+    taskFifteen.push(Math.floor(Math.random()*10)+1);
+}
+let sum = 0;
+for (let s = 0; s < taskFifteen.length; s++) {
+    sum += taskFifteen[s];  
+}
+
+const arithmMean = sum / taskFifteen.length;
+
+console.log(taskFifteen);
+console.log(arithmMean);
+*/

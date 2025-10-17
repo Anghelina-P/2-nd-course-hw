@@ -18,7 +18,13 @@
         flex-direction: column;
         align-items: center;
 
-        &-mob{
+        &-mob1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+        }
+        &-mob2{
             display: flex;
             flex-direction: column;
             align-items: center;
