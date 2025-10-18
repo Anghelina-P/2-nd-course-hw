@@ -1,5 +1,5 @@
 
-/*
+
 function guessNumGame(userNum) {
 
    let attemps = 0;
@@ -22,7 +22,7 @@ function guessNumGame(userNum) {
    }
       
    } while (userNum!==secretNum);
-}*/
+}
 
 
 
@@ -70,32 +70,12 @@ function simpleArithmeticGame() {
 
 
 
-/* const taskFifteen = []
-
-for (r=0;r<6;r++){
-    taskFifteen.push(Math.floor(Math.random()*10)+1);
-}
-let sum = 0;
-for (let s = 0; s < taskFifteen.length; s++) {
-    sum += taskFifteen[s];  
-}
-
-const arithmMean = sum / taskFifteen.length;
-
-console.log(taskFifteen);
-console.log(arithmMean); */
 
 
 
 
 
 
-
-
-
-
-
-/*
 const num = [1, 5, 4, 10, 0, 3]
 for (let a = 0; a < num.length; a++){
 
@@ -280,4 +260,3 @@ const arithmMean = sum / taskFifteen.length;
 
 console.log(taskFifteen);
 console.log(arithmMean);
-*/
