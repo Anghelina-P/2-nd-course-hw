@@ -68,6 +68,79 @@ function simpleArithmeticGame() {
   
 }
 
+/*
+Задание 1
+Преобразовать строку 'js' в верхний регистр.*/
+
+let string = 'js';
+console.log(string.toUpperCase());
+
+ /*Задание 2
+Создать функцию, которая принимает массив строк и строку. Функция должна вернуть новый массив, 
+содержащий только те элементы первого массива, которые начинаются со второй строки. Регистр 
+символов не влияет на результат.*/
+
+/*Задание 3
+Округлить число 32.58884:
+До меньшего целого.
+До большего целого.
+До ближайшего целого.*/
+
+let num = 32.58884;
+console.log(Math.floor(num));
+console.log(Math.ceil(num));
+console.log(Math.round(num));
+
+/*Задание 4
+Найти минимальное и максимальное значения из чисел 52, 53, 49, 77, 21, 32 и вывести их 
+в консоль.*/
+
+console.log(Math.max(52, 53, 49, 77, 21, 32));
+
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+
+/*Задание 5
+Создать функцию, которая выводит в консоль случайное число от 1 до 10.*/
+
+function rndm(params) {
+   return Math.ceil(Math.random()*10);
+}
+console.log(rndm());
+
+/*Задание 6
+Написать функцию, которая принимает целое число и возвращает массив случайных чисел от 0 
+до этого числа. Длина массива должна быть в два раза меньше переданного числа.*/
+
+function acceptedNumber(a) {
+    const arrayOfNumbers = []
+    let arrayLength = Math.ceil(a/2);
+
+    for (let i = 0; i < array.Length; i++) {
+       const rndmNum = Math.ceil(Math.random()*a);
+       rndmNum.push(arrayOfNumbers)
+    }
+
+    return rndmNum
+}
+console.log(acceptedNumber(8));
+
+
+
+/*Задание 7
+Создать функцию, которая принимает два целых числа и возвращает случайное 
+число в этом диапазоне.*/
+
+/*Задание 8
+Вывести в консоль текущую дату.*/
+
+/*Задание 9
+Создать переменную 
+currentDate, хранящую текущую дату. Вывести дату, которая наступит через 73 дня после текущей.*/
+
+/*Задание 10
+Написать функцию, которая принимает дату и возвращает ее в формате:
+Дата: [число] [месяц на русском] [год] — это [день недели на русском].
+Время: [часы]:[минуты]:[секунды]*/
 
 
 
@@ -76,6 +149,17 @@ function simpleArithmeticGame() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*
 const num = [1, 5, 4, 10, 0, 3]
 for (let a = 0; a < num.length; a++){
 
@@ -171,7 +255,6 @@ console.log(flatNine);
 
 const taskTen = [3, 6, 5, 1, 2, 8, 9, 4, 7];
 console.log(taskTen);
-
 for (let h = 0; h < taskTen.length - 1; h++) {
     const sum = taskTen[h] + taskTen[h + 1];
     console.log(sum);
@@ -260,3 +343,4 @@ const arithmMean = sum / taskFifteen.length;
 
 console.log(taskFifteen);
 console.log(arithmMean);
+*/
