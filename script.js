@@ -68,6 +68,62 @@ function simpleArithmeticGame() {
   
 }
 
+
+
+function reverseTextGame () {
+
+     let userText;
+    
+    while ((userText = prompt('Введите текст')) !== null) {
+    alert(userText.split('').reverse().join(''));
+    }
+
+}
+
+/*
+Игра «Викторина»
+Описание создайте простую викторину с несколькими вопросами и вариантами ответов.
+Требования:
+Сайт предлагает несколько вопросов и вариантов ответов.
+Запрашивает у пользователя ответы на каждый вопрос.
+Подсчитывает и выводит количество правильных ответов.
+Последовательность создания игры Викторина:
+Используйте предоставленный массив вопросов:
+Массив 
+quiz
+ содержит три вопроса с вариантами ответов и правильными ответами.*/
+
+/*Запросите у пользователя ответы. Используйте функцию 
+prompt()
+ для получения ответа пользователя на каждый вопрос.
+Проверьте ответы и подсчитайте правильные:
+Сравните ответ пользователя с правильным ответом и увеличьте счетчик правильных ответов, если ответ верный.
+Выведите результат:
+В конце игры выведите количество правильных ответов с помощью 
+alert()
+.*/
+
+
+       const quiz = [
+           {
+               question: "Какой цвет неба?",
+               options: ["1. Красный", "2. Синий", "3. Зеленый"],
+               correctAnswer: 2  
+           },
+           {
+               question: "Сколько дней в неделе?",
+               options: ["1. Шесть", "2. Семь", "3. Восемь"],
+               correctAnswer: 2
+           },
+           {
+               question: "Сколько у человека пальцев на одной руке?",
+               options: ["1. Четыре", "2. Пять", "3. Шесть"],
+               correctAnswer: 2
+           }
+       ];
+
+
+
 /*
 Задание 1
 Преобразовать строку 'js' в верхний регистр.*/
@@ -79,6 +135,16 @@ console.log(string.toUpperCase());
 Создать функцию, которая принимает массив строк и строку. Функция должна вернуть новый массив, 
 содержащий только те элементы первого массива, которые начинаются со второй строки. Регистр 
 символов не влияет на результат.*/
+
+
+function filterStringsOfLetter(array, letter) {
+    return array.filter(str => 
+        str.toLowerCase().startsWith(letter.toLowerCase())
+    );  
+}
+
+console.log(filterStringsOfLetter(['облако', 'кокос', 'карамель'], 'к')); 
+
 
 /*Задание 3
 Округлить число 32.58884:
@@ -113,38 +179,78 @@ console.log(rndm());
 
 function acceptedNumber(a) {
     const arrayOfNumbers = []
-    let arrayLength = Math.ceil(a/2);
 
-    for (let i = 0; i < array.Length; i++) {
+    for (let i = 0; i < a/2; i++) {
        const rndmNum = Math.ceil(Math.random()*a);
-       rndmNum.push(arrayOfNumbers)
+       arrayOfNumbers.push(rndmNum)
     }
 
-    return rndmNum
+    return arrayOfNumbers
 }
 console.log(acceptedNumber(8));
-
+console.log(acceptedNumber(12));
 
 
 /*Задание 7
 Создать функцию, которая принимает два целых числа и возвращает случайное 
 число в этом диапазоне.*/
 
+function twoIntegers(b, c) {
+    const casualNumb = []
+    for (let index = 0; index < 1; index++) {
+        const randomNum = Math.floor(Math.random() * (c - b + 1)) + b;
+        casualNumb.push(randomNum)
+    }
+
+    return casualNumb
+}
+console.log(twoIntegers(12, 17));
+
 /*Задание 8
 Вывести в консоль текущую дату.*/
+
+console.log(new Date);
 
 /*Задание 9
 Создать переменную 
 currentDate, хранящую текущую дату. Вывести дату, которая наступит через 73 дня после текущей.*/
+
+let currentDate = new Date();
+let futureDate = new Date(currentDate.getTime() + 73 * 24 * 60 * 60 * 1000);
+
+console.log(futureDate.toLocaleDateString()); 
+console.log(futureDate.toLocaleTimeString()); 
 
 /*Задание 10
 Написать функцию, которая принимает дату и возвращает ее в формате:
 Дата: [число] [месяц на русском] [год] — это [день недели на русском].
 Время: [часы]:[минуты]:[секунды]*/
 
+function acceptsDate(date) {
+    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля',
+                    'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    
+    const daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 
+                       'четверг', 'пятница', 'суббота'];
 
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const dayOfWeek = daysOfWeek[date.getDay()];
 
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    const time = `${hours}:${minutes}:${seconds}`;
 
+    return `Дата: ${day} ${month} ${year} — это ${dayOfWeek}
+Время: ${time}`;
+}
+
+ 
+console.log(acceptsDate(new Date(2025, 5, 17, 14, 30, 45))); 
+
+console.log(acceptsDate(new Date())); 
 
 
 
