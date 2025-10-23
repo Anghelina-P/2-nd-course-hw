@@ -97,14 +97,15 @@ quiz
 prompt()
  для получения ответа пользователя на каждый вопрос.
 Проверьте ответы и подсчитайте правильные:
-Сравните ответ пользователя с правильным ответом и увеличьте счетчик правильных ответов, если ответ верный.
+Сравните ответ пользователя с правильным ответом и увеличьте счетчик правильных ответов, если 
+ответ верный.
 Выведите результат:
 В конце игры выведите количество правильных ответов с помощью 
 alert()
 .*/
 
 
-       const quiz = [
+       const quiz = [   
            {
                question: "Какой цвет неба?",
                options: ["1. Красный", "2. Синий", "3. Зеленый"],
@@ -121,6 +122,37 @@ alert()
                correctAnswer: 2
            }
        ];
+
+function quizGame() {
+    let correctAnswers = 0;
+
+    for (const question of quiz) {
+        const optionsText = question.options.join('\n');
+        
+        let userAnswer;
+        let validInput = false;
+        
+        do {
+            userAnswer = parseInt(prompt(`${question.question}\n\n${optionsText}`));
+            validInput = [1, 2, 3].includes(userAnswer);
+            
+            if (!validInput) { 
+                alert("Пожалуйста, введите число 1, 2 или 3");
+            }
+        } while (!validInput); 
+        
+        if (userAnswer === question.correctAnswer) {
+            correctAnswers++;
+        }
+    }
+
+    alert(`Правильных ответов: ${correctAnswers}`);
+
+}
+
+
+
+
 
 
 
