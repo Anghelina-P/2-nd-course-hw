@@ -1,14 +1,23 @@
 
 
-function guessNumGame(userNum) {
+function guessNumGame() {
 
    let attemps = 0;
 
+   let userNum;
+
    let secretNum =  Math.floor(Math.random() * 100) + 1;
-   
+
    do {
 
-      userNum = Number(prompt('Попытайся угадать число от 1 до 100'));
+      userNum = prompt('Попытайся угадать число от 1 до 100');
+      
+      if (userNum === null) {
+         alert('пока');
+         return;
+      }
+      
+      userNum = Number(userNum);
       attemps++;
 
    if (userNum<secretNum) {
@@ -137,134 +146,46 @@ function quizGame() {
 
 
 
+const userRightSigns = ['камень','ножницы','бумага']
 
-
-
-
-
-let string = 'js';
-console.log(string.toUpperCase());
-
-
-
-
-
-function filterStringsOfLetter(array, letter) {
-    return array.filter(str => 
-        str.toLowerCase().startsWith(letter.toLowerCase())
-    );  
-}
-
-console.log(filterStringsOfLetter(['облако', 'кокос', 'карамель'], 'к')); 
-
-
-
-
-
-let num = 32.58884;
-console.log(Math.floor(num));
-console.log(Math.ceil(num));
-console.log(Math.round(num));
-
-
-
-
-
-
-
-console.log(Math.max(52, 53, 49, 77, 21, 32));
-
-console.log(Math.min(52, 53, 49, 77, 21, 32));
-
-
-
-
-
-
-function rndm(params) {
-   return Math.ceil(Math.random()*10);
-}
-console.log(rndm());
-
-
-
-
-
-
-function acceptedNumber(a) {
-    const arrayOfNumbers = []
-
-    for (let i = 0; i < a/2; i++) {
-       const rndmNum = Math.ceil(Math.random()*a);
-       arrayOfNumbers.push(rndmNum)
+function RockPaperScissorsGame(params) {
+    const rulesOfGame = {
+        'камень':'ножницы',
+        'ножницы':'бумага',
+        'бумага':'камень'
     }
 
-    return arrayOfNumbers
-}
-console.log(acceptedNumber(8));
-console.log(acceptedNumber(12));
+    const randomSign = userRightSigns[Math.floor(Math.random() * userRightSigns.length)];
 
+    let userSign;
+    do {
+        userSign = prompt('Камень, ножницы, бумага?');
 
-
-
-
-
-function twoIntegers(b, c) {
-    const casualNumb = []
-    for (let index = 0; index < 1; index++) {
-        const randomNum = Math.floor(Math.random() * (c - b + 1)) + b;
-        casualNumb.push(randomNum)
-    }
-
-    return casualNumb
-}
-console.log(twoIntegers(12, 17));
-
-
-
-
-
-
-console.log(new Date);
-
-
-
-
-
-let currentDate = new Date();
-let futureDate = new Date(currentDate.getTime() + 73 * 24 * 60 * 60 * 1000);
-
-console.log(futureDate.toLocaleDateString()); 
-console.log(futureDate.toLocaleTimeString()); 
-
-
-
-
-function acceptsDate(date) {
-    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля',
-                    'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        if (userSign === null) {
+            alert('пока');
+            return
+        }
     
-    const daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 
-                       'четверг', 'пятница', 'суббота'];
+        userSign = userSign.toLowerCase();
 
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-    const dayOfWeek = daysOfWeek[date.getDay()];
+    } while (userSign && !userRightSigns.includes(userSign));
 
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
-    const time = `${hours}:${minutes}:${seconds}`;
-
-    return `Дата: ${day} ${month} ${year} — это ${dayOfWeek}
-Время: ${time}`;
+    if (userSign === randomSign) {
+        alert('ничья')
+    }
+    else if (rulesOfGame[userSign] === randomSign) {
+        alert('победа')
+    } 
+    else {
+        alert('поражение')
+    }
+    
+    
 }
 
- 
-console.log(acceptsDate(new Date(2025, 5, 17, 14, 30, 45))); 
 
-console.log(acceptsDate(new Date())); 
+
+
 
 
 
@@ -341,20 +262,22 @@ setTimeout(() => { clearInterval(stopwatch); console.log('30 секунд про
 /*Задание 4
 Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска.
 Допишите функцию delayForSecond
- так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
+ так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте setTimeout.*/ 
 
 function delayForSecond(callback) {
-    // Код писать можно только внутри этой функции
+   setTimeout(() => {
    callback();
+   }, 1000);
+  
 }
 
 delayForSecond(function () {
    console.log('Привет, Глеб!');
-})*/ 
+})
 
 /*Задание 5
 Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
-
+*/
 // Функция delayForSecond через 1 секунду пишет в консоль 
 // «Прошла одна секунда», а затем вызывает переданный колбэк
 function delayForSecond(cb) {
@@ -372,5 +295,5 @@ function sayHi (name) {
 // Код выше менять нельзя
 
 // Нужно изменить код ниже:
-delayForSecond(sayHi('Глеб')) */
+delayForSecond(() => sayHi('Глеб'))
 
