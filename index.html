@@ -3,74 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Мини-игры</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
  <header class="header center">
+  <img  class="header__star" src="assets/headerstar.png" alt="большая звезда">
+  <img class="header__star-two" src="assets/Star2.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+  <img class="header__star-three" src="assets/Star3.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+  <img class="section__games-ten" src="assets/Star10.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+  <div class="header__stars-mob">
+    <img class="header__starmob-big" src="assets/mobbigstar.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="header__starmob-two" src="assets/mobStar2.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="header__starmob-three" src="assets/mobStar3.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="header__starmob-four" src="assets/mobStar4.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="header__starmob-five" src="assets/mobStar5.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+  </div>
     <div class="header__text">
-    <h1 class="header__title">Добро пожаловать <br> на мой сайт мини-игр</h1>
-    <p class="header__description">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <b>«Поехали!»</b> и <b>приступай</b>.</p>
-    <button class="header__button for__all-buttons">Поехали!</button>
-    </div>
+    <h1 class="header__title">
+        <div class="header__title-mob1">
+          <div>Добро </div> <div>пожаловать</div>
+        </div>
+       <div class="header__title-mob2">
+        <div>на мой сайт</div> <div> мини-игр </div>
+       </div>
+    </h1>
+    <p class="header__description">
+      <div class="header__description-desk">
+        Тебе предстоит пройти несколько увлекательных игр. <br>Если готов,нажимай <b>«Поехали!»</b> и <b>приступай</b>.
+        </div>
+      <div class="header__description-mob">
+        <div>Тебе предстоит пройти несколько</div> 
+        <div>увлекательных игр.Если готов,</div>
+        <div>нажимай <b>«Поехали!»</b> и <b>приступай</b>.</div>
+        </div>
+        <a href="#aboutgames" class="section__about-link header__button for__all-buttons"> Поехали!</a>
+      </div>
+    </p>
+  <img class="header__star-five" src="assets/Star5.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+  <img class="header__star-four" src="assets/Star4.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
  </header>
-
  <section class="section__about center">
-    <h1 class="section__about-title">Об играх</h1>
+    <h1 class="section__about-title" id="aboutgames">Об играх</h1>
+      <h1 class="section__about-titlemob">Мини-игры</h1>
     <p class="section__about-text">В моей коллекции представлено 6 игр на разные темы <br> Игры несложные — в них может поиграть каждый. <br>
        Все игры доступны для пользования.</p>
+        <img class="section__about-starone" src="assets/Star1.png" alt="звезда средних размеров">
       <div class="section__about-div">
        <div class="section__about-div1">
         <a href="#ugadaichislo" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/ugadaichislo1.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/ugadaichislo1.png" alt="игра">
             <p class="section__cards-number">Игра № 1</p>
             <h3 class="section__cards-title">Угадай число</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
         <a href="#arifmetica" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/arifmetica2.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/arifmetica2.png" alt="игра">
             <p class="section__cards-number">Игра № 2</p>
             <h3 class="section__cards-title">Простая арифметика</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
         <a href="#perevernitext" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/perevernitext3.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/perevernitext3.png" alt="игра">
             <p class="section__cards-number">Игра № 3</p>
             <h3 class="section__cards-title">Переверни текст</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
        </div>
        <div class="section__about-div2">
         <a href="#kamennozhnitsy" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/kemennozhnitsy4.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/kemennozhnitsy4.png" alt="игра">
             <p class="section__cards-number">Игра № 4</p>
             <h3 class="section__cards-title">Камень, ножницы, <br> бумага</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
         <a href="#victorina" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/victorina5.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/victorina5.png" alt="игра">
             <p class="section__cards-number">Игра № 5</p>
             <h3 class="section__cards-title">Простая викторина</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
         <a href="#generator" class="section__about-link">
         <article class="section__about-cards">
-            <img src="assets/assets/generator6.png" alt="игра">
+            <img class="section__about-img" src="assets/assets/generator6.png" alt="игра">
             <p class="section__cards-number">Игра № 6</p>
             <h3 class="section__cards-title">Генератор случайных цветов</h3>
+            <p class="section__cards-descriptionmob">Попробуй угадать случайное число от 1 до 100.</p>
+            <button class="section__cards-butttonmob">Играть!</button>
         </article>
         </a>
        </div>
       </div>
+        <img class="section__about-startwelve" src="assets/Star12.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+        <img class="section__about-starelleven" src="assets/Star11.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
  </section>
  <section class="section__games center">
     <h1 class="section__games-heading">Мини-игры</h1>
+    <img class="section__games-six" src="assets/Star6.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="section__games-seven" src="assets/Star7.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+    <img class="section__games-eight" src="assets/Star8.png" alt="это всё маленькие звёздочки,разбросанные по сайту">
+
     <div class="section__games-general">
         <article class="section__games-cards" id="ugadaichislo">
             <div  class="section__games-div">
@@ -78,20 +126,20 @@
                  <h3 class="section__games-title">Угадай число</h3>
                  <p class="section__games-text">Попробуй угадать случайное число от 1 до 100.</p>
                  <form action="#">
-                  <button class="section__games-button for__all-buttons">Играть!</button>
+                   <button class="section__games-button for__all-buttons" onclick="guessNumGame()">Играть!</button>
                  </form>
               </div>  
-              <img src="assets/assets/ugadaichislo1.2.png" alt="">                            
+              <img class="section__games-img" src="assets/assets/ugadaichislo1.2.png" alt="игра">                            
             </div>
         </article>
         <article class="section__games-cards" id="arifmetica">
             <div class="section__games-div">
-              <img src="assets/assets/arifmetica2.2.png" alt="">
+              <img class="section__games-img" src="assets/assets/arifmetica2.2.png" alt="игра">
             <div class="section__games-description">
               <h3 class="section__games-title">Простая арифметика</h3>
               <p class="section__games-text">Попробуй решить простые арифметические задачи.</p>
               <form action="#">
-                <button class="section__games-button for__all-buttons">Играть!</button>
+                <button class="section__games-button for__all-buttons" onclick="simpleArithmeticGame()">Играть!</button>
               </form>
             </div>
             </div>
@@ -105,12 +153,12 @@
                 <button class="section__games-button for__all-buttons">Играть!</button>
               </form>
             </div>
-            <img src="assets/assets/perevernitext3.2.png" alt="">
+            <img class="section__games-img" src="assets/assets/perevernitext3.2.png" alt="игра">
           </div>
         </article>
         <article class="section__games-cards" id="kamennozhnitsy">
             <div class="section__games-div">
-              <img src="assets/assets/kemennozhnitsy4.2.png" alt="">
+              <img class="section__games-img" src="assets/assets/kemennozhnitsy4.2.png" alt="игра">
             <div class="section__games-description">
               <h3 class="section__games-title">Камень, <br> ножницы, бумага</h3>
               <p class="section__games-text">Сыграй в популярную игру против компьютера.</p>
@@ -129,12 +177,12 @@
                 <button class="section__games-button for__all-buttons">Играть!</button>
               </form>
             </div>
-              <img src="assets/assets/victorina5.2.png" alt="">
+              <img class="section__games-img" src="assets/assets/victorina5.2.png" alt="игра">
             </div>
         </article>
         <article class="section__games-cards" id="generator">
             <div class="section__games-div">
-              <img src="assets/assets/generator6.2.png" alt="">
+              <img class="section__games-img" src="assets/assets/generator6.2.png" alt="игра">
             <div class="section__games-description">
               <h3 class="section__games-title">Генератор случайных <br> цветов</h3>
               <p class="section__games-text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
@@ -144,7 +192,6 @@
             </div>
             </div>
         </article>
-    </div>
  </section>
  <footer class="footer">
   <p class="footer__text">Все права защищены.</p>
@@ -152,7 +199,7 @@
 
 
 
-
+<script src="script.js"></script>
 
 </body>
 </html>
