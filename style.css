@@ -20,6 +20,37 @@
   overflow: hidden;
   position: relative;
 }
+.header__scroll {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  background: rgb(188, 236, 48);
+}
+.header__scroll-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  animation: scroll-left 20s linear infinite;
+}
+.header__scroll-content p {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 700;
+}
+.header__scroll-content img {
+  width: 20px;
+  height: 20px;
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .header__star {
   position: absolute;
   top: -333px;
