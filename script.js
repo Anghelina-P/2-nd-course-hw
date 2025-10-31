@@ -144,57 +144,62 @@ function quizGame() {
 
 
 
-
 const userRightSigns = ['камень','ножницы','бумага']
 
-function RockPaperScissorsGame(params) {
+function RockPaperScissorsGame() {
     const rulesOfGame = {
         'камень':'ножницы',
         'ножницы':'бумага',
         'бумага':'камень'
     }
 
-    const randomSign = userRightSigns[Math.floor(Math.random() * userRightSigns.length)];
-
-    let userSign;
     do {
-        userSign = prompt('Камень, ножницы, бумага?');
+        const randomSign = userRightSigns[Math.floor(Math.random() * userRightSigns.length)];
 
-        if (userSign === null) {
-            alert('пока');
-            return
+        let userSign;
+        do {
+            userSign = prompt('Камень, ножницы, бумага?');
+
+            if (userSign === null) {
+                alert('пока');
+                return;
+            }
+        
+            userSign = userSign.toLowerCase();
+
+        } while (!userRightSigns.includes(userSign));
+
+        if (userSign === randomSign) {
+            alert('ничья')
         }
-    
-        userSign = userSign.toLowerCase();
+        else if (rulesOfGame[userSign] === randomSign) {
+            alert('победа')
+        } 
+        else {
+            alert('поражение')
+        }
 
-    } while (userSign && !userRightSigns.includes(userSign));
-
-    if (userSign === randomSign) {
-        alert('ничья')
-    }
-    else if (rulesOfGame[userSign] === randomSign) {
-        alert('победа')
-    } 
-    else {
-        alert('поражение')
-    }
-    
-    
+    } while (true);
 }
 
-/*Генератор случайных цветов
-Описание: При каждом клике на кнопку фон страницы меняется на случайный цвет.
 
-Требования: Создайте кнопку, которая при нажатии меняет цвет фона (или другого элемента) на случайный.
 
-Смотри, твоя задача — сделать функцию, которая будет генерить рандомные символы, из которых получиться 
-код цвета: # + 6 символов. Например, #e1d4c8. То есть тебе нужно создать строку и 6 раз к ней рандомно
- добавить символы через Math.random(). И выбирать символ из массива подходящих символов. Тут важно помнить, 
- что символы в цвет идут не все, а от 0 до F. То есть цвета 0r3l8x не существует) Это же касается символов -, _ и тд. */
 
+const colors = ['rgb(255, 0, 0)','rgb(0, 255, 0)','rgb(0, 0, 255)','rgb(255, 192, 203)','rgb(173, 216, 230)','rgb(75, 0, 130)','rgb(238, 130, 238)']
 
 function colorGeneratorGame() {
-    
+    const usAnsw = confirm('Хотите поменять фон?')
+
+    const randomColors = colors[Math.floor(Math.random()*colors.length)];
+
+
+    if (usAnsw === false) {
+        alert('пока')
+    } else {
+        const changeBcgColor = document.querySelector('.section__games')
+        changeBcgColor.style.backgroundColor = randomColors
+        return
+    }
 }
 
 
