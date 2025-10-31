@@ -193,7 +193,9 @@ function RockPaperScissorsGame(params) {
  что символы в цвет идут не все, а от 0 до F. То есть цвета 0r3l8x не существует) Это же касается символов -, _ и тд. */
 
 
-
+function colorGeneratorGame() {
+    
+}
 
 
 
