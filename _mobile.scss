@@ -129,6 +129,8 @@
         font-size: 40px;
         padding-top: 48px;
         padding-bottom: 48px;
+        display: flex;
+        justify-content: flex-start;
     }
     &-text{
         display: none;
