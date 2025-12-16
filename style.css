@@ -169,7 +169,7 @@
 .section__about-div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 32px;
 }
 .section__about-link {
@@ -178,7 +178,8 @@
 .section__about-cards {
   background: rgb(255, 255, 255);
   border-radius: 30px;
-  width: 378px;
+  max-width: 378px;
+  width: 100%;
   overflow: hidden;
   transition: all 0.4s ease;
   position: relative;
@@ -186,6 +187,7 @@
   flex-direction: column;
   gap: 32px;
   box-sizing: border-box;
+  flex: 1 1 300px;
 }
 .section__about-cards:hover {
   transform: scale(1.1);
@@ -459,6 +461,8 @@
     font-size: 40px;
     padding-top: 48px;
     padding-bottom: 48px;
+    display: flex;
+    justify-content: flex-start;
   }
   .section__about-text {
     display: none;
